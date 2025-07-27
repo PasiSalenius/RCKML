@@ -98,9 +98,8 @@ public extension KMLColor {
         self.blue = Double(blue)
         self.alpha = Double(alpha)
     }
-    #endif
 
-    #if canImport(AppKit)
+    #else
     var nsColor: NSColor {
         NSColor(red: CGFloat(red), green: CGFloat(green), blue: CGFloat(blue), alpha: CGFloat(alpha))
     }
